@@ -47,6 +47,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 - The `LightningModule.load_from_checkpoint()` function now calls `.configure_model()` on the model if it is overridden, to ensure all layers can be loaded from the checkpoint ([#19036](https://github.com/Lightning-AI/lightning/pull/19036))
 
 
+- The `NeptuneLogger` now uploads only the changed model checkpoints ([#19144](https://github.com/Lightning-AI/pytorch-lightning/pull/19144))
+
+
 - Restored usage of `step` parameter when logging metrics with `NeptuneLogger` ([#19126](https://github.com/Lightning-AI/pytorch-lightning/pull/19126))
 
 
