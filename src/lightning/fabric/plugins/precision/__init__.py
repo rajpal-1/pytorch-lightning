@@ -17,6 +17,7 @@ from lightning.fabric.plugins.precision.deepspeed import DeepSpeedPrecision
 from lightning.fabric.plugins.precision.double import DoublePrecision
 from lightning.fabric.plugins.precision.fsdp import FSDPPrecision
 from lightning.fabric.plugins.precision.half import HalfPrecision
+from lightning.fabric.plugins.precision.itrex import ITREXPrecision
 from lightning.fabric.plugins.precision.precision import Precision
 from lightning.fabric.plugins.precision.transformer_engine import TransformerEnginePrecision
 from lightning.fabric.plugins.precision.xla import XLAPrecision
@@ -31,4 +32,5 @@ __all__ = [
     "XLAPrecision",
     "FSDPPrecision",
     "TransformerEnginePrecision",
+    "ITREXPrecision",
 ]
