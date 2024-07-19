@@ -208,7 +208,7 @@ class TorchCollective(Collective):
     @override
     def _convert_to_native_op(cls, op: Union[str, ReduceOp, RedOpType]) -> Union[ReduceOp, RedOpType]:
         # `ReduceOp` is an empty shell for `RedOpType`, the latter being the actually returned class.
-        # For example, `ReduceOp.SUM` returns a `RedOpType.SUM`. the only exception is `RedOpType.PREMUL_SUM` where
+        # For example, `ReduceOp.SUM` returns a `RedOpType.SUM`. The only exception is `RedOpType.PREMUL_SUM` where
         # `ReduceOp` is still the desired class, but it's created via a special `_make_nccl_premul_sum` function
         if isinstance(op, (ReduceOp, RedOpType)):
             return op
